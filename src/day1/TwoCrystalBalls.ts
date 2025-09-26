@@ -3,11 +3,9 @@ export default function two_crystal_balls(breaks: boolean[]): number {
 const jmpAmount=Math.floor(Math.sqrt(breaks.length))
 let i=jmpAmount
 for(;i<breaks.length;i+=jmpAmount){
-    console.log('i===>',i)
     if(breaks[i]) break;
 }
 i-=jmpAmount
-console.log('i-after==>',i)
 for(let j=i;j<breaks.length;j++){
     if(breaks[j]) return j
 }
